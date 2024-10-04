@@ -1,0 +1,15 @@
+$bodywidth: 100vw;
+
+.body-content {
+    header {
+        height: 8vh;
+        width: $bodywidth;
+    }
+
+    section {
+        height: 87vh;
+        width: $bodywidth;
+    }
+
+    overflow: hidden;
+}

@@ -1,0 +1,94 @@
+<div class="over-all-container">
+    <div class="container">
+        <form [formGroup]="employee">
+            <div class="row">
+                <div class="col-25">
+                    <label for="name">Name</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="name" name="name" placeholder="Name.." formControlName="name"
+                        appAlphabetOnly>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="email">Email Address</label>
+                </div>
+                <div class="col-75">
+                    <input type="email" id="email" name="email" placeholder="Email Address.." formControlName="emailId">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="code">Employee Code</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="code" name="code" placeholder="Employee Code.."
+                        formControlName="employeeCode">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="number_">Mobile Number</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="number_" name="number_" placeholder="Employee Number.."
+                        formControlName="mobile" appOnlyNumbers maxlength="10">
+                </div>
+            </div>
+            <ng-container *ngTemplateOutlet="formarraytemplate;"></ng-container>
+            <button type="submit" [disabled]="employee.invalid" (click)="submitData()">Submit</button>
+        </form>
+    </div>
+
+</div>
+
+
+
+<ng-template #formarraytemplate>
+    <div class="form-template">
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    Department <span style="cursor: pointer;">
+                        <i class="bi bi-plus-circle" (click)="isPop=!isPop"></i>
+                    </span>
+                </div>
+                <div class="col-7">
+                    Designation
+                </div>
+                <div class="col-2">
+                    Action
+                </div>
+            </div>
+            <div class="row mt-3">
+                <ng-container *ngTemplateOutlet="department_list"></ng-container>
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+<ng-container *ngIf="isPop">
+    <app-popup (close)="popupData($event)" [dept]="deptDef"></app-popup>
+</ng-container>
+
+
+
+<ng-template #department_list>
+    <div class="col-3">
+        <select class="form-select ">
+            <ng-container *ngFor="let option of deptDef">
+                <option [value]="option">{{option}}</option>
+            </ng-container>
+        </select>
+    </div>
+    <div class="col-7">
+        <jqxComboBox [width]="'96%'" [height]="'42px'" [source]="desingationData" [multiSelect]="true"
+            #comboBoxReference [checkboxes]="true">
+        </jqxComboBox>
+    </div>
+    <div class="col-2">
+        <span class="trash-form" (click)="removeData()"><i class="bi bi-trash3"></i></span>
+    </div>
+</ng-template>

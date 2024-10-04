@@ -1,0 +1,52 @@
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+    font-family: Monstrate;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    width: 190px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+
+.logout-session {
+    position: absolute;
+    right: 3%;
+    top: 30%;
+    color: white;
+    cursor: pointer;
+
+    p {
+        transition: .5s ease-in-out;
+    }
+}
+
+
+
+.logout-session:hover {
+    p {
+        color: green;
+    }
+}

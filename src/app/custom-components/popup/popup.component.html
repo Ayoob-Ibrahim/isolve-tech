@@ -1,0 +1,43 @@
+<p>popup works!</p>
+<div id="popup1" class="overlay">
+    <div class="popup">
+        <ng-container *ngTemplateOutlet="pop_up"></ng-container>
+    </div>
+</div>
+
+
+<ng-template #pop_up>
+    <div class="pop-container">
+        <header>
+            <h3>DEPARTMENT</h3>
+            <span class="close-popup" (click)="closepopup()"><i class="bi bi-x-circle"></i></span>
+        </header>
+        <section>
+            <ng-container *ngTemplateOutlet="body_popup"></ng-container>
+        </section>
+    </div>
+</ng-template>
+
+<ng-template #body_popup>
+    <div class="pop-up-body">
+        <div class="add-data">
+            <input type="text" maxlength="22" [(ngModel)]="newdept" (keyup.enter)="addDept()">
+            <button class="add" (click)="addDept()">ADD</button>
+        </div>
+        <div class="list-data">
+            <ng-container>
+                <div class="container">
+                    <div class="row">
+                        <ng-container *ngFor="let data of dept;let i = index">
+                            <div class="col-6">
+                                <div class="inner-cont">
+                                    <p>{{data}} <i class="bi bi-trash" (click)="removedept(i)"></i></p>
+                                </div>
+                            </div>
+                        </ng-container>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</ng-template>

@@ -1,0 +1,9 @@
+<div [style.height]="gridHeight" class="grid-css">
+    <div style="height: 100%; position: absolute; top: 20%; width: 90%">
+        <jqxGrid [source]="source" height="100%" [width]="'99.5%'" [enabletooltips]="true" [columnsresize]="true"
+            [filterable]="true" [sortable]="true" [autoheight]="false" [theme]="'base'" [pageable]="true"
+            [altrows]="true" [columns]="columns" #grid (onCellclick)="cellClickRow($event)"
+            [pagesize]="GridInfo ? GridInfo.rows : 10" [pagerheight]="35" [columnsheight]="35">
+        </jqxGrid>
+    </div>
+</div>

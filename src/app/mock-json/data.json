@@ -1,0 +1,23 @@
+[
+    {
+        "name": "John Doe",
+        "emailId": "john.doe@example.com",
+        "employeeCode": "EMP001",
+        "mobile": "1234567890",
+        "action": "EDIT"
+    },
+    {
+        "name": "Jane Smith",
+        "emailId": "jane.smith@example.com",
+        "employeeCode": "EMP002",
+        "mobile": "0987654321",
+        "action": "EDIT"
+    },
+    {
+        "name": "Bob Johnson",
+        "emailId": "bob.johnson@example.com",
+        "employeeCode": "EMP003",
+        "mobile": "5551234567",
+        "action": "EDIT"
+    }
+]

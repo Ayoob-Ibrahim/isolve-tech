@@ -1,0 +1,32 @@
+[
+    {
+        "text": "Name",
+        "displayfield": "name",
+        "cellsalign": "center",
+        "align": "center"
+    },
+    {
+        "text": "Email ID",
+        "displayfield": "emailId",
+        "cellsalign": "center",
+        "align": "center"
+    },
+    {
+        "text": "Employee Code",
+        "displayfield": "employeeCode",
+        "cellsalign": "center",
+        "align": "center"
+    },
+    {
+        "text": "Mobile",
+        "displayfield": "mobile",
+        "cellsalign": "center",
+        "align": "center"
+    },
+    {
+        "text": "Action",
+        "displayfield": "action",
+        "cellsalign": "center",
+        "align": "center"
+    }
+]

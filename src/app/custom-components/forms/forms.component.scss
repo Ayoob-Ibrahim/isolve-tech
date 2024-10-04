@@ -1,0 +1,110 @@
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+
+input[type=email],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    font-family: Monstrate;
+}
+
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+.over-all-container {
+    height: 86vh;
+    overflow-y: auto;
+}
+
+.form-template {
+    .container {
+        background-color: #A9A9A9;
+        font-family: Monstrate;
+    }
+}
+
+.form-select {
+    height: 42px;
+    font-size: 12px;
+    width: 190px;
+}
+
+.trash-form {
+    margin-left: 20px;
+    color: red;
+    font-size: 1.2rem;
+}
+
+button {
+    background-color: #e8e8e8;
+    width: 170px;
+    border-radius: .3rem;
+    border-color: none;
+    cursor: pointer !important;
+    font: Monstrate;
+    text-transform: uppercase;
+    font-size: 15px;
+    margin-left: 85%;
+    margin-top: 1%;
+}
